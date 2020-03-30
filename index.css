@@ -19,4 +19,14 @@
   left: 50%;
   margin-left: -150px;
   margin-top: -15px;
+  border: 4px solid black;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+
+#help {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: white;
 }

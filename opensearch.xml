@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+	<ShortName>ami3d</ShortName>
+	<Description>Amazing start page</Description>
+	<!--Image height="64" width="64" type="image/jpg">http://mjal.github.io/ami3d/logo.jpg</Image-->
+	<Url type="text/html" template="http://mjal.github.io/ami3d?q={searchTerms}"/>
+</OpenSearchDescription>
