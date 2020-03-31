@@ -36,6 +36,8 @@ search = window.location.search
 if (search && search.match(/^\?q=/)) {
   query = search.substring(3).replace(/\/$/, '').replace(/\+/g, ' ');
   doSearch(decodeURIComponent(query));
+} else {
+  document.getElementById("search").style = "";
 }
 
 // --- Render
