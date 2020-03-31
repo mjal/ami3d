@@ -11,7 +11,7 @@ bangs["yt"]  = "https://www.youtube.com/results?search_query={{query}}";
 bangs["sc"]  = "https://www.soundcloud.com/search?q={{query}}";
 bangs["w"]   = bangs["wen"] = "https://en.wikipedia.org/w/index.php?search={{query}}";
 bangs["wfr"] = "https://fr.wikipedia.org/w/index.php?search={{query}}";
-bangs["d"]   = bangs["den"] = "https://en.wiktionary.org/wiki/{{query}}":
+bangs["d"]   = bangs["den"] = "https://en.wiktionary.org/wiki/{{query}}";
 bangs["dfr"] = "https://fr.wiktionary.org/wiki/{{query}}";
 
 // -- Search
