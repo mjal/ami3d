@@ -1,8 +1,7 @@
 // --- Shader params
 const fps  = 30;
 const size = { x: 800, y: 600 }; /* should match canvas size */
-const fragments = [XdGGzw, MlS3Rh, MdSXzz, _3dXyWj];
-
+const fragments = [tsXXWn]; //[tsXXWn, XdGGzw, MlS3Rh, MdSXzz, _3dXyWj]; // wdXSWn /* crypt roots */
 
 // --- Bangs
 var bangs = {};
@@ -66,7 +65,6 @@ const r1 = Math.random(); const r2 = Math.random(); const r3 = Math.random();
 const draw = function (time) { drawScene(gl, program, geometry, size.x, size.y, time, r1, r2, r3); }
 draw(0);
 setInterval(function () {
-  console.log(options.animate)
   if (options.animate) {
     draw((new Date()).getTime() - startTime);
   }
