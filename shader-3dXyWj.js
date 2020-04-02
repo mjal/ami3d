@@ -4,6 +4,9 @@ var _3dXyWj = `
 precision highp float;
 uniform float iTime;
 uniform vec2 iResolution;
+uniform float iR1;
+uniform float iR2;
+uniform float iR3;
 
 const float PI = 3.1415926535897932384626433832795;
 const float PI_2 = 1.57079632679489661923;
@@ -128,10 +131,7 @@ void main() {
 
     float n = snoise(coord0 * c);
 
-    float r = n;
-    float g = n;
-    float b = n;
-    vec3 color = vec3(r, g, b);
+    vec3 color = vec3(n * iR1, n * iR2, n * iR3);
     vec3 final_color = color;
 
     gl_FragColor = vec4(final_color, 1.0);

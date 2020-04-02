@@ -61,7 +61,7 @@ function clear(gl) {
   gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 }
 
-function drawScene(gl, program, geometry, width, height, time) {
+function drawScene(gl, program, geometry, width, height, time, r1, r2, r3) {
   const vertexPosition = gl.getAttribLocation(program, 'pos');
 
   clear(gl);
@@ -72,6 +72,9 @@ function drawScene(gl, program, geometry, width, height, time) {
 
   gl.useProgram(program);
 
+  gl.uniform1f(gl.getUniformLocation(program, 'iR1'), r1);
+  gl.uniform1f(gl.getUniformLocation(program, 'iR2'), r2);
+  gl.uniform1f(gl.getUniformLocation(program, 'iR3'), r3);
   gl.uniform1f(gl.getUniformLocation(program, 'iTime'), time / 1000.0);
   gl.uniform2f(gl.getUniformLocation(program, 'iResolution'), width, height);
 

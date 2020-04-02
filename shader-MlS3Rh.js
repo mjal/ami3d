@@ -2,9 +2,11 @@
 const MlS3Rh = `
 #version 100
 precision highp float;
-
 uniform float iTime;
 uniform vec2 iResolution;
+uniform float iR1;
+uniform float iR2;
+uniform float iR3;
 
 const vec4 cHashA4 = vec4 (0., 1., 57., 58.);
 const vec3 cHashA3 = vec3 (1., 57., 113.);
@@ -66,7 +68,7 @@ void main()
   vec2 p = uv;
   for (int i = 0; i < 10; i ++) p -= FlowField (p) * 0.03;
   vec3 col = Fbm2 (5. * p + vec2 (-0.1 * tCur, 0.)) *
-     vec3 (0.5, 0.5, 1.);
+     vec3 (0.5 * iR1, 0.5 * iR2, 0.5 * iR3);
   gl_FragColor = vec4 (col, 1.);
 }
 `

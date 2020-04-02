@@ -1,7 +1,8 @@
 // --- Shader params
 const fps  = 30;
 const size = { x: 800, y: 600 }; /* should match canvas size */
-const fragments = [XdGGzw, MlS3Rh, MdSXzz, /*WslyzX,*/ _3dXyWj];
+const fragments = [XdGGzw, MlS3Rh, MdSXzz, _3dXyWj];
+
 
 // --- Bangs
 var bangs = {};
@@ -48,10 +49,11 @@ const fs = fragments[fragmentIndex];
 const canvas = document.querySelector("#glCanvas");
 const gl = initGl(canvas, size.x, size.y);
 const program = initProgram(gl, vs, fs);
-const geometry = makeQuad(gl)
+const geometry = makeQuad(gl);
 const startTime = (new Date()).getTime();
+const r1 = Math.random(); const r2 = Math.random(); const r3 = Math.random();
 setInterval(function () {
   const currentTime = (new Date()).getTime();
   const time = currentTime - startTime;
-  drawScene(gl, program, geometry, size.x, size.y, time);
+  drawScene(gl, program, geometry, size.x, size.y, time, r1, r2, r3);
 }, 1000 / fps);

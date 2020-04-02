@@ -3,6 +3,9 @@ const MdSXzz = `
 precision highp float;
 uniform float iTime;
 uniform vec2 iResolution;
+uniform float iR1;
+uniform float iR2;
+uniform float iR3;
 
 const mat2 m = mat2( 0.80,  0.60, -0.60,  0.80 );
 
@@ -75,6 +78,7 @@ void main()
   
   vec2 q = gl_FragCoord.xy/iResolution.xy;
   col *= pow(16.0*q.x*q.y*(1.0-q.x)*(1.0-q.y),0.1);
-  
+
+  col = vec3(col.x * iR1, col.y * iR2, col.z * iR3);
   gl_FragColor = vec4( col, 1.0 );
 }`
