@@ -15,6 +15,17 @@ bangs["wfr"] = "https://fr.wikipedia.org/w/index.php?search={{query}}";
 bangs["d"]   = bangs["den"] = "https://en.wiktionary.org/wiki/{{query}}";
 bangs["dfr"] = "https://fr.wiktionary.org/wiki/{{query}}";
 
+// -- Options
+var options = {}
+options.animate = localStorage.getItem("animate");
+if (options.animate === null) options.animate = true;
+if (options.animate === "false") options.animate = false;
+document.getElementById("animate").addEventListener("click", function (e) {
+  options.animate = !options.animate;
+  localStorage.setItem("animate", options.animate);
+  e.preventDefault();
+});
+
 // -- Search
 function doSearch(query) {
   var bang  = "g";
@@ -39,10 +50,10 @@ if (search && search.match(/^\?q=/)) {
   query = search.substring(3).replace(/\/$/, '').replace(/\+/g, ' ');
   doSearch(decodeURIComponent(query));
 } else {
-  document.getElementById("search").style = "";
+  document.getElementById("tools").style = "";
 }
 
-// --- Render
+// -- Render
 const fragmentIndex = Math.floor(Math.random() * fragments.length);
 const vs = `attribute vec4 pos; void main() { gl_Position = pos; }`;
 const fs = fragments[fragmentIndex];
@@ -52,8 +63,11 @@ const program = initProgram(gl, vs, fs);
 const geometry = makeQuad(gl);
 const startTime = (new Date()).getTime();
 const r1 = Math.random(); const r2 = Math.random(); const r3 = Math.random();
+const draw = function (time) { drawScene(gl, program, geometry, size.x, size.y, time, r1, r2, r3); }
+draw(0);
 setInterval(function () {
-  const currentTime = (new Date()).getTime();
-  const time = currentTime - startTime;
-  drawScene(gl, program, geometry, size.x, size.y, time, r1, r2, r3);
+  console.log(options.animate)
+  if (options.animate) {
+    draw((new Date()).getTime() - startTime);
+  }
 }, 1000 / fps);

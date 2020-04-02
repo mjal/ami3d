@@ -24,9 +24,19 @@
   padding-left: 10px;
 }
 
+
+a {
+  color: white;
+}
+
 #help {
   position: absolute;
   top: 30px;
   right: 30px;
-  color: white;
+}
+
+#animate {
+  position: absolute;
+  top: 30px;
+  left: 30px;
 }
