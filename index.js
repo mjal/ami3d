@@ -1,7 +1,7 @@
 // --- Shader params
 const fps  = 30;
 const size = { x: 800, y: 600 }; /* should match canvas size */
-const fragments = [tsXXWn]; //[tsXXWn, XdGGzw, MlS3Rh, MdSXzz, _3dXyWj]; // wdXSWn /* crypt roots */
+const fragments = [mandelbrot, tsXXWn, XdGGzw, MlS3Rh, MdSXzz, _3dXyWj]; // wdXSWn /* crypt roots */
 
 // --- Bangs
 var bangs = {};
