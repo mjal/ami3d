@@ -13,6 +13,7 @@ bangs["w"]   = bangs["wen"] = "https://en.wikipedia.org/w/index.php?search={{que
 bangs["wfr"] = "https://fr.wikipedia.org/w/index.php?search={{query}}";
 bangs["d"]   = bangs["den"] = "https://en.wiktionary.org/wiki/{{query}}";
 bangs["dfr"] = "https://fr.wiktionary.org/wiki/{{query}}";
+bangs["wr"]  = "https://www.wordreference.com/definition/{{query}}";
 
 // -- Options
 var options = {}
