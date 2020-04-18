@@ -64,6 +64,7 @@ const geometry = makeQuad(gl);
 const startTime = (new Date()).getTime();
 const r1 = Math.random(); const r2 = Math.random(); const r3 = Math.random();
 const draw = function (time) { drawScene(gl, program, geometry, size.x, size.y, time, r1, r2, r3); }
+
 draw(0);
 setInterval(function () {
   if (options.animate) {
