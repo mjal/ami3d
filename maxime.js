@@ -4,7 +4,7 @@ const texts = [
   "Parler rarement est conforme à la nature.",
   "Être bon à l'égard des bons et bon aussi envers ceux qui ne le sont pas,<br/>c'est posséder la bonté même.",
   "On régit un grand État comme on fait frire un petit poisson.",
-  "Un voyage de mille lieux a commencé par un pas."
+  "Un voyage de mille lieux commence par un pas."
 ];
 
 const textIndex = Math.floor(Math.random() * texts.length);
