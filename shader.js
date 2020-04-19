@@ -17,7 +17,7 @@ const draw = function (time) { drawScene(gl, program, geometry, size.x, size.y, 
 
 draw(0);
 setInterval(function () {
-  if (options.animate) {
+  if (window.options.animate) {
     draw((new Date()).getTime() - startTime);
   }
 }, 1000 / fps);

@@ -40,3 +40,13 @@ a {
   top: 30px;
   left: 30px;
 }
+
+#maxime {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-variant: small-caps;
+  font-size: 1.7em;
+}
