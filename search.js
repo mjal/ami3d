@@ -4,11 +4,12 @@ bangs["g"]   = "https://www.google.fr/search?q={{query}}";
 bangs["ddg"] = "https://www.duckduckgo.com/?q={{query}}";
 bangs["yt"]  = "https://www.youtube.com/results?search_query={{query}}";
 bangs["sc"]  = "https://www.soundcloud.com/search?q={{query}}";
-bangs["w"]   = bangs["wen"] = "https://en.wikipedia.org/w/index.php?search={{query}}";
+bangs["wen"]   = bangs["w"] = "https://en.wikipedia.org/w/index.php?search={{query}}";
 bangs["wfr"] = "https://fr.wikipedia.org/w/index.php?search={{query}}";
-bangs["d"]   = bangs["den"] = "https://en.wiktionary.org/wiki/{{query}}";
+bangs["den"]   = bangs["d"] = "https://en.wiktionary.org/wiki/{{query}}";
 bangs["dfr"] = "https://fr.wiktionary.org/wiki/{{query}}";
 bangs["wr"]  = "https://www.wordreference.com/definition/{{query}}";
+bangs["wres"] = "https://www.wordreference.com/definicion/{{query}}";
 
 // -- Search
 function doSearch(query) {
